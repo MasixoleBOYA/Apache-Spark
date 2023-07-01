@@ -41,6 +41,7 @@ predictions = rfModel.transform(test)
 
 evaluator = MulticlassClassificationEvaluator(labelCol="Labels",predictionCol="prediction")
 accuracy = evaluator.evaluate(predictions)
+
 print(f"\nAccuracy: {round(accuracy*100,2)}%")
 print(f"Error: {round(1.0 - accuracy,4)}")
 
